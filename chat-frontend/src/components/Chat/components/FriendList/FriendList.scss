@@ -1,0 +1,127 @@
+@import "../../../../assets/scss/variables";
+
+#friends {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+
+    @media (min-width: 800px) {
+        flex-grow: 1;
+        margin-right: 2rem;
+        max-width: 250px;
+        min-width: 250px;
+        margin-bottom: 0;
+    }
+
+    #title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        align-items: flex-end;
+
+        button {
+            border: none;
+            background-color: $bg-main;
+            color: white;
+            width: 70px;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+    }
+    
+    hr {
+        border-top: 1px solid #cfcfcf;
+        width: 100%;
+        margin-bottom: 0
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      
+      input {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        max-width: 400px;
+      
+        &::placeholder {
+          color: #aaa;
+        }
+      
+        &:focus {
+          outline: none;
+          border-color: #6c63ff;
+          box-shadow: 0 0 3px rgba(108, 99, 255, 0.5);
+        }
+      }
+
+    #friends-box {
+        overflow-y: auto;
+        display: flex;
+        text-align: left;
+        
+        @media (min-width: 800px) {
+            flex-direction: column;
+        }
+
+    }
+
+    #no-chat {
+        padding: 10px;
+    }
+
+    .opened {
+        background-color: #ececec;
+    }
+
+    #suggestions {
+
+        margin-top: 10px;
+        overflow-y: auto;
+        max-height: 300px;
+    
+        .suggestion {
+            margin: 10px 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            button {
+                background-color: $success;
+                border-radius: 10px;
+                border: none;
+                height: 25px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: $bg-main; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #67b6e4; 
+  }
+}
